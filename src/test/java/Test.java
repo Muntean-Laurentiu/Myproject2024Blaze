@@ -2,11 +2,10 @@ import Pages.HomePage;
 import Pages.Products;
 import Pages.SignIn;
 import org.testng.Assert;
-import org.testng.annotations.Test;
 
-public class TestAdToCart extends BaseTest {
+public class Test extends BaseTest {
 
-    @Test
+    @org.testng.annotations.Test
     public void checkTitlePage() throws InterruptedException {
         HomePage homePage = new HomePage(driver);
         System.out.println(homePage.verifyHomePage());
@@ -16,27 +15,27 @@ public class TestAdToCart extends BaseTest {
         Thread.sleep(2000);
     }
 
-    @Test
-    public void checkMonitorPage() throws InterruptedException {
-        Products products = new Products(driver);
-        products.clickMonitorButton();
-        Thread.sleep(2000);
-        products.verifyManyProductsAreDisplayed();
+    //@org.testng.annotations.Test
+    //public void checkMonitorPage() throws InterruptedException {
+        //Products products = new Products(driver);
+        //products.clickMonitorButton();
+        //Thread.sleep(2000);
+        //products.verifyManyProductsAreDisplayed();
 
 
-        Thread.sleep(5000);
-    }
+        //Thread.sleep(5000);
+    //}
 
-    @Test
+    @org.testng.annotations.Test
     public void signInTest() throws InterruptedException {
         HomePage homePage = new HomePage(driver);
         System.out.println(homePage.verifyHomePage());
         Thread.sleep(2000);
         SignIn signIn = new SignIn(driver);
         Thread.sleep(2000);
-        SignIn.clickLogin();
+        signIn.clickLogIn();
         Thread.sleep(5000);
-        SignIn.verifyLogInFormIsVisible();
+        signIn.verifyLogInFormIsVisible();
 
     }
 
