@@ -5,18 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5741ed0-7fb2-4c17-b895-139bba47bd2c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/HomePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/Products.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/SignIn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/BaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestLogIn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/Products.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/Products.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/SignIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/SignIn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +39,12 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TestNG.Test.LogInTest.executor": "Run",
+    "TestNG.Test.SigInTest.executor": "Run",
+    "TestNG.Test.SignUpTest.executor": "Run",
+    "TestNG.Test.addToCartTest.executor": "Run",
     "TestNG.Test.checkTitlePage.executor": "Run",
+    "TestNG.Test.signInTest.executor": "Run",
     "TestNG.TestAdToCart.checkMonitorPage.executor": "Run",
     "TestNG.TestAdToCart.checkTitlePage.executor": "Run",
     "TestNG.TestAdToCart.signIn.executor": "Run",
@@ -62,36 +60,12 @@
     "project.structure.side.proportion": "0.0"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.Test.signInTest">
-    <configuration name="TestLogIn.checkTitlePage" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="DemoblazeMyProject2024" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestLogIn" />
-      <option name="METHOD_NAME" value="checkTitlePage" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestLogIn.signIn" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="DemoblazeMyProject2024" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestLogIn" />
-      <option name="METHOD_NAME" value="signIn" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Test.checkTitlePage" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.Test.addToCartTest">
+    <configuration name="Test.LogInTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoblazeMyProject2024" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="Test" />
-      <option name="METHOD_NAME" value="checkTitlePage" />
+      <option name="METHOD_NAME" value="LogInTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -99,11 +73,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test.signIn" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Test.SigInTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoblazeMyProject2024" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="Test" />
-      <option name="METHOD_NAME" value="signIn" />
+      <option name="METHOD_NAME" value="SigInTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test.SignUpTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="DemoblazeMyProject2024" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Test" />
+      <option name="METHOD_NAME" value="SignUpTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test.addToCartTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="DemoblazeMyProject2024" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Test" />
+      <option name="METHOD_NAME" value="addToCartTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -125,11 +123,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.Test.addToCartTest" />
+        <item itemvalue="TestNG.Test.LogInTest" />
+        <item itemvalue="TestNG.Test.SignUpTest" />
+        <item itemvalue="TestNG.Test.SigInTest" />
         <item itemvalue="TestNG.Test.signInTest" />
-        <item itemvalue="TestNG.Test.checkTitlePage" />
-        <item itemvalue="TestNG.Test.signIn" />
-        <item itemvalue="TestNG.TestLogIn.signIn" />
-        <item itemvalue="TestNG.TestLogIn.checkTitlePage" />
       </list>
     </recent_temporary>
   </component>
@@ -169,11 +167,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
           <line>13</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Pages/Products.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

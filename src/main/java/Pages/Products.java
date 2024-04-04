@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Products {
@@ -19,16 +20,76 @@ public class Products {
     }
 
     public void clickMonitorButton(){
-        WebElement monitorButton = driver.findElement(By.xpath("//*[@id=\"itemc\"]"));
+        WebElement monitorButton = driver.findElement(By.xpath("/html/body/div[5]/div/div[1]/div/a[4]"));
         monitorButton.click();
 
     }
     public void verifyManyProductsAreDisplayed() {
-        List<WebElement> products_searched = driver.findElements(By.xpath("//*[@id=\"tbodyid\"]/div[1]"));
+        List<WebElement> products_searched = driver.findElements(By.className("div.col-lg-9"));
         if (products_searched.size()>1) {
             System.out.println("Avem mai multe produse cautate");
         }
         else assert false;
     }
 
+    public void clickLaptopsButton(){
+        WebElement LaptopsButton = driver.findElement(By.xpath("/html/body/div[5]/div/div[1]/div/a[3]"));
+        LaptopsButton.click();
+    }
+
+    public void clickSonyI5Product(){
+        WebElement sonyVaioI5 = driver.findElement(By.xpath("//*[@id=\"tbodyid\"]/div[1]/div/div/h4/a"));
+        sonyVaioI5.click();
+    }
+
+    public void addToCart(){
+        WebElement AddToCartButton = driver.findElement(By.xpath("//*[@id=\"tbodyid\"]/div[2]/div/a"));
+        AddToCartButton.click();
+    }
+
+    public void clickAsusProduct(){
+        WebElement asusFullHD = driver.findElement(By.xpath("//*[@id=\"tbodyid\"]/div[2]/div/div/h4/a"));
+        asusFullHD.click();
+    }
+
+    public void cartButton(){
+        WebElement cartButton = driver.findElement(By.id("cartur"));
+        cartButton.click();
+    }
+
+    public int numberOfProductsInCart(){
+        List<WebElement> productsInCart = driver.findElements(By.className("success"));
+        return productsInCart.size();
+    }
+
+    public List<String> getprice1() {
+        List<WebElement> prices = driver.findElements(By.cssSelector("#tbodyid > tr:nth-child(1) > td:nth-child(3)"));
+        List<String> priceValues = new ArrayList<>();
+        for (WebElement price : prices) {
+            priceValues.add(price.getText());
+        }
+        return priceValues;
+    }
+
+    public List<String> getprice2() {
+        List<WebElement> prices = driver.findElements(By.cssSelector("#tbodyid > tr:nth-child(2) > td:nth-child(3)"));
+        List<String> priceValues = new ArrayList<>();
+        for (WebElement price : prices) {
+            priceValues.add(price.getText());
+        }
+        return priceValues;
+    }
+
+    //public void pretTotalCos(String ){
+        //String preturiProduse1 = getprice1();
+        //String preturiProduse2 = getprice2();
+        //Integer sum_total = preturiProduse1 + preturiProduse2;
+        //System.out.println(sum_total);
+
+
+   // }
+
 }
+
+
+
