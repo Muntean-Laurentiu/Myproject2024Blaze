@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Products {
 
@@ -80,14 +82,43 @@ public class Products {
         return priceValues;
     }
 
-    //public void pretTotalCos(String ){
-        //String preturiProduse1 = getprice1();
-        //String preturiProduse2 = getprice2();
-        //Integer sum_total = preturiProduse1 + preturiProduse2;
-        //System.out.println(sum_total);
+    public List<Integer> formatPrices() {
+        List<String> listaStringuri;
+        List<Integer> listaNumere = new ArrayList<>();
+        Pattern pattern = Pattern.compile("\\d+");// "\\d+" <= asta cauta numere (decimal)
+        for (String str : getprice1()) {
+            Matcher matcher = pattern.matcher(str);
+            while (matcher.find()) {
+                listaNumere.add(Integer.parseInt(matcher.group()));
+            }
+        }
+        for (String str : getprice2()) {
+            Matcher matcher = pattern.matcher(str);
+            while (matcher.find()) {
+                listaNumere.add(Integer.parseInt(matcher.group()));
+            }
+        }
+        return listaNumere;
+
+    }
 
 
-   // }
+    public void pretTotalCos( ){
+        List<Integer> preturiProduse = formatPrices();
+        Integer sum_total = preturiProduse.get(0) + preturiProduse.get(1);
+        System.out.println(sum_total);
+    }
+
+    public void clickPlaceOrderButton(){
+        WebElement PlaceOrderButton = driver.findElement(By.xpath("//*[@id=\"page-wrapper\"]/div/div[2]/button"));
+        PlaceOrderButton.click();
+    }
+
+    public void verifyPlaceOrderFormIsVisible() {
+        WebElement PlaceOrderForm = driver.findElement(By.id("signInModalLabel"));
+        PlaceOrderForm.isDisplayed();
+    }
+
 
 }
 

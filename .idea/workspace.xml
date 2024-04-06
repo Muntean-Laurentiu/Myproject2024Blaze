@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5741ed0-7fb2-4c17-b895-139bba47bd2c" name="Changes" comment="">
+    <list default="true" id="d5741ed0-7fb2-4c17-b895-139bba47bd2c" name="Changes" comment="Lucrat 4-4-2024">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/PlaceOrder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Pages/Products.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/Products.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/SignIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/SignIn.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,6 +44,9 @@
     "TestNG.Test.addToCartTest.executor": "Run",
     "TestNG.Test.checkTitlePage.executor": "Run",
     "TestNG.Test.signInTest.executor": "Run",
+    "TestNG.Test.tc00CheckTitlePage.executor": "Run",
+    "TestNG.Test.tc03AddToCartTest.executor": "Run",
+    "TestNG.Test.tc04PlaceOrderTest.executor": "Run",
     "TestNG.TestAdToCart.checkMonitorPage.executor": "Run",
     "TestNG.TestAdToCart.checkTitlePage.executor": "Run",
     "TestNG.TestAdToCart.signIn.executor": "Run",
@@ -60,36 +62,12 @@
     "project.structure.side.proportion": "0.0"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.Test.addToCartTest">
+  <component name="RunManager" selected="TestNG.Test.tc03AddToCartTest">
     <configuration name="Test.LogInTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoblazeMyProject2024" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="Test" />
       <option name="METHOD_NAME" value="LogInTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Test.SigInTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="DemoblazeMyProject2024" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Test" />
-      <option name="METHOD_NAME" value="SigInTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Test.SignUpTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="DemoblazeMyProject2024" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Test" />
-      <option name="METHOD_NAME" value="SignUpTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -109,11 +87,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test.signInTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Test.tc00CheckTitlePage" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoblazeMyProject2024" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="Test" />
-      <option name="METHOD_NAME" value="signInTest" />
+      <option name="METHOD_NAME" value="tc00CheckTitlePage" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test.tc03AddToCartTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="DemoblazeMyProject2024" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Test" />
+      <option name="METHOD_NAME" value="tc03AddToCartTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test.tc04PlaceOrderTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="DemoblazeMyProject2024" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Test" />
+      <option name="METHOD_NAME" value="tc04PlaceOrderTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -123,11 +125,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.Test.tc03AddToCartTest" />
+        <item itemvalue="TestNG.Test.tc04PlaceOrderTest" />
+        <item itemvalue="TestNG.Test.tc00CheckTitlePage" />
         <item itemvalue="TestNG.Test.addToCartTest" />
         <item itemvalue="TestNG.Test.LogInTest" />
-        <item itemvalue="TestNG.Test.SignUpTest" />
-        <item itemvalue="TestNG.Test.SigInTest" />
-        <item itemvalue="TestNG.Test.signInTest" />
       </list>
     </recent_temporary>
   </component>
@@ -159,6 +161,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Lucrat 4-4-2024" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lucrat 4-4-2024" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
