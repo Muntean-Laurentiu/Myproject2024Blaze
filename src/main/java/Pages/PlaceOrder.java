@@ -3,7 +3,12 @@ package Pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 public class PlaceOrder {
     private WebDriver driver;
@@ -59,18 +64,35 @@ public class PlaceOrder {
     }
 
     public void clickPurchaseButton(){
+
+        Duration timeout = Duration.ofMinutes(1); // Așteaptă 1 minut
+        long timeoutSeconds = timeout.getSeconds();
+        WebDriverWait wait = new WebDriverWait(driver, timeout);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"orderModal\"]/div/div/div[3]/button[2]")));
+
         WebElement PurchaseButton = driver.findElement(By.xpath("//*[@id=\"orderModal\"]/div/div/div[3]/button[2]"));
         PurchaseButton.click();
     }
 
     public void verifySweetAlertVisible() {
-        WebElement SweetAler = driver.findElement(By.className("sa-placeholder"));
-        SweetAler.isDisplayed();
+
+        Duration timeout = Duration.ofMinutes(1); // Așteaptă 1 minut
+        long timeoutSeconds = timeout.getSeconds();
+        WebDriverWait wait = new WebDriverWait(driver, timeout);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("sa-placeholder")));
+
+
         System.out.println("Thank you for your purchase! ");
 
     }
 
     public void clickOkAlertButton(){
+
+        Duration timeout = Duration.ofMinutes(1); // Așteaptă 1 minut
+        long timeoutSeconds = timeout.getSeconds();
+        WebDriverWait wait = new WebDriverWait(driver, timeout);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("body > div.sweet-alert.showSweetAlert.visible > div.sa-button-container > div > button")));
+
         WebElement OkAlertButton = driver.findElement(By.cssSelector("body > div.sweet-alert.showSweetAlert.visible > div.sa-button-container > div > button"));
         OkAlertButton.click();
     }

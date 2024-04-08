@@ -3,7 +3,10 @@ package Pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -22,6 +25,12 @@ public class Products {
     }
 
     public void clickMonitorButton(){
+
+        Duration timeout = Duration.ofMinutes(1); // Așteaptă 1 minut
+        long timeoutSeconds = timeout.getSeconds();
+        WebDriverWait wait = new WebDriverWait(driver, timeout);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[5]/div/div[1]/div/a[4]")));
+
         WebElement monitorButton = driver.findElement(By.xpath("/html/body/div[5]/div/div[1]/div/a[4]"));
         monitorButton.click();
 
@@ -35,26 +44,56 @@ public class Products {
     }
 
     public void clickLaptopsButton(){
+
+        Duration timeout = Duration.ofMinutes(1); // Așteaptă 1 minut
+        long timeoutSeconds = timeout.getSeconds();
+        WebDriverWait wait = new WebDriverWait(driver, timeout);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[5]/div/div[1]/div/a[3]")));
+
         WebElement LaptopsButton = driver.findElement(By.xpath("/html/body/div[5]/div/div[1]/div/a[3]"));
         LaptopsButton.click();
     }
 
     public void clickSonyI5Product(){
+
+        Duration timeout = Duration.ofMinutes(1); // Așteaptă 1 minut
+        long timeoutSeconds = timeout.getSeconds();
+        WebDriverWait wait = new WebDriverWait(driver, timeout);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"tbodyid\"]/div[1]/div/div/h4/a")));
+
         WebElement sonyVaioI5 = driver.findElement(By.xpath("//*[@id=\"tbodyid\"]/div[1]/div/div/h4/a"));
         sonyVaioI5.click();
     }
 
     public void addToCart(){
+
+        Duration timeout = Duration.ofMinutes(1); // Așteaptă 1 minut
+        long timeoutSeconds = timeout.getSeconds();
+        WebDriverWait wait = new WebDriverWait(driver, timeout);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"tbodyid\"]/div[2]/div/a")));
+
         WebElement AddToCartButton = driver.findElement(By.xpath("//*[@id=\"tbodyid\"]/div[2]/div/a"));
         AddToCartButton.click();
     }
 
     public void clickAsusProduct(){
+
+        Duration timeout = Duration.ofMinutes(1); // Așteaptă 1 minut
+        long timeoutSeconds = timeout.getSeconds();
+        WebDriverWait wait = new WebDriverWait(driver, timeout);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"tbodyid\"]/div[2]/div/div/h4/a")));
+
         WebElement asusFullHD = driver.findElement(By.xpath("//*[@id=\"tbodyid\"]/div[2]/div/div/h4/a"));
         asusFullHD.click();
     }
 
     public void cartButton(){
+
+        Duration timeout = Duration.ofMinutes(1); // Așteaptă 1 minut
+        long timeoutSeconds = timeout.getSeconds();
+        WebDriverWait wait = new WebDriverWait(driver, timeout);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("cartur")));
+
         WebElement cartButton = driver.findElement(By.id("cartur"));
         cartButton.click();
     }

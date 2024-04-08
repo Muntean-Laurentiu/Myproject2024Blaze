@@ -3,6 +3,10 @@ package Pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class SignIn {
     private WebDriver driver;
@@ -17,6 +21,12 @@ public class SignIn {
     }
 
     public void verifyLogInFormIsVisible() {
+
+        Duration timeout = Duration.ofMinutes(1); // Așteaptă 1 minut
+        long timeoutSeconds = timeout.getSeconds();
+        WebDriverWait wait = new WebDriverWait(driver, timeout);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("logInModalLabel")));
+
         WebElement logExist = driver.findElement(By.id("logInModalLabel"));
         logExist.isDisplayed();
 
@@ -31,6 +41,12 @@ public class SignIn {
     }
 
     public void clickPopUpLogIn() {
+
+        Duration timeout = Duration.ofMinutes(1); // Așteaptă 1 minut
+        long timeoutSeconds = timeout.getSeconds();
+        WebDriverWait wait = new WebDriverWait(driver, timeout);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"logInModal\"]/div/div/div[3]/button[2]")));
+
         WebElement buttonLogin2 = driver.findElement(By.xpath("//*[@id=\"logInModal\"]/div/div/div[3]/button[2]"));
         buttonLogin2.click();
     }
@@ -41,6 +57,12 @@ public class SignIn {
     }
 
     public void clickLogOut() {
+
+        Duration timeout = Duration.ofMinutes(1); // Așteaptă 1 minut
+        long timeoutSeconds = timeout.getSeconds();
+        WebDriverWait wait = new WebDriverWait(driver, timeout);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("logout2")));
+
         WebElement buttonLogOut = driver.findElement(By.id("logout2"));
         buttonLogOut.click();
     }
@@ -51,6 +73,13 @@ public class SignIn {
     }
 
     public void clickSignUp() {
+
+        Duration timeout = Duration.ofMinutes(1); // Așteaptă 1 minut
+        long timeoutSeconds = timeout.getSeconds();
+        WebDriverWait wait = new WebDriverWait(driver, timeout);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("signin2")));
+
+
         WebElement buttonSignUp = driver.findElement(By.id("signin2"));
         buttonSignUp.click();
     }
@@ -69,6 +98,12 @@ public class SignIn {
     }
 
     public void clickPopUpSignUp() {
+
+        Duration timeout = Duration.ofMinutes(1); // Așteaptă 1 minut
+        long timeoutSeconds = timeout.getSeconds();
+        WebDriverWait wait = new WebDriverWait(driver, timeout);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"signInModal\"]/div/div/div[3]/button[2]")));
+
         WebElement buttonSignUp = driver.findElement(By.xpath("//*[@id=\"signInModal\"]/div/div/div[3]/button[2]"));
         buttonSignUp.click();
         //driver.switchTo().alert().accept();
