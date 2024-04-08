@@ -16,7 +16,6 @@ public class PlaceOrder {
     public PlaceOrder (WebDriver driver) {this.driver = driver;}
 
 
-
     public void clickPlaceOrderButton(){
         WebElement PlaceOrderButton = driver.findElement(By.xpath("//*[@id=\"page-wrapper\"]/div/div[2]/button"));
         PlaceOrderButton.click();
@@ -29,6 +28,12 @@ public class PlaceOrder {
     }
 
     public void completeName (String name){
+
+        Duration timeout = Duration.ofMinutes(1); // Așteaptă 1 minut
+        long timeoutSeconds = timeout.getSeconds();
+        WebDriverWait wait = new WebDriverWait(driver, timeout);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("name")));
+
         WebElement name_locator = driver.findElement(By.id("name"));
         name_locator.sendKeys(name);
 

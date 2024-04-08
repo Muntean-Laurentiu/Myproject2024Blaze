@@ -28,14 +28,13 @@ public class Test extends BaseTest {
         signIn.clickSignUp();
         signIn.verifySignUpFormIsVisible();
         Thread.sleep(500);
-        signIn.signUpBasicInfo("Laurentiu Mioailo", "Blaze25");
+        signIn.signUpBasicInfo("Laurentiu Mirailo", "Blaze25");
         signIn.clickPopUpSignUp();
         Thread.sleep(1000);
         driver.switchTo().alert().accept(); // for popUp alerts
 
 
         Thread.sleep(2000);
-
     }
 
     @org.testng.annotations.Test
@@ -47,7 +46,6 @@ public class Test extends BaseTest {
         SignIn signIn = new SignIn(driver);
         signIn.clickLogIn();
         signIn.verifyLogInFormIsVisible();
-        Thread.sleep(1000);
         signIn.signInBasicInfo("Laurentiu Vasile","Blaze25");
         signIn.clickPopUpLogIn();
         signIn.verifyUserNameIsVisible();
@@ -56,7 +54,6 @@ public class Test extends BaseTest {
 
 
         Thread.sleep(2000);
-
     }
 
     @org.testng.annotations.Test
@@ -78,9 +75,8 @@ public class Test extends BaseTest {
         Thread.sleep(500);
         products.clickAsusProduct();
         products.addToCart();
-        Thread.sleep(200);
+        Thread.sleep(500);
         driver.switchTo().alert().accept(); // for popUp alerts
-        Thread.sleep(1500);
         homePage.homePageButton();
         products.cartButton();
         Thread.sleep(1000);
@@ -97,10 +93,7 @@ public class Test extends BaseTest {
 
 
         Thread.sleep(2000);
-
     }
-
-
 
     @org.testng.annotations.Test
     public void tc04PlaceOrderTest() throws InterruptedException {
@@ -125,9 +118,8 @@ public class Test extends BaseTest {
         Thread.sleep(500);
         products.clickAsusProduct();
         products.addToCart();
-        Thread.sleep(200);
+        Thread.sleep(500);
         driver.switchTo().alert().accept(); // for popUp alerts
-        Thread.sleep(1500);
         homePage.homePageButton();
         products.cartButton();
         Thread.sleep(1000);
@@ -143,22 +135,18 @@ public class Test extends BaseTest {
         products.pretTotalCos();
         placeOrder.clickPlaceOrderButton();
         placeOrder.verifyPlaceOrderFormIsVisible();
-        Thread.sleep(1500);
         placeOrder.completeName("Laurentiu");
         placeOrder.completeCountry("Romania");
         placeOrder.completeCity("Brasov");
         placeOrder.completeCreditCard("563278959963");
         placeOrder.completeMonth("05");
         placeOrder.completeYear("2024");
-
         placeOrder.clickPurchaseButton();
         placeOrder.verifySweetAlertVisible();
-
         placeOrder.clickOkAlertButton();
 
 
-
-        Thread.sleep(5000);
+        Thread.sleep(2000);
     }
 
 

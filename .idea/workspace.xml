@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d5741ed0-7fb2-4c17-b895-139bba47bd2c" name="Changes" comment="Lucrat 4-4-2024">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Pages/PlaceOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/PlaceOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/Products.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/Products.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/SignIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/SignIn.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -131,8 +128,8 @@
       <list>
         <item itemvalue="TestNG.Test.tc04PlaceOrderTest" />
         <item itemvalue="TestNG.Test.tc03AddToCartTest" />
-        <item itemvalue="TestNG.Test.tc01SignUpTest" />
         <item itemvalue="TestNG.Test.tc02LogInTest" />
+        <item itemvalue="TestNG.Test.tc01SignUpTest" />
         <item itemvalue="TestNG.Test.tc00CheckTitlePage" />
       </list>
     </recent_temporary>
