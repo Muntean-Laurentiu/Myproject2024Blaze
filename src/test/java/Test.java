@@ -70,7 +70,6 @@ public class Test extends BaseTest {
         Thread.sleep(500);
         driver.switchTo().alert().accept(); // for popUp alerts
         homePage.homePageButton();
-        Thread.sleep(500);
         products.clickMonitorButton();
         Thread.sleep(500);
         products.clickAsusProduct();
@@ -113,7 +112,6 @@ public class Test extends BaseTest {
         Thread.sleep(500);
         driver.switchTo().alert().accept(); // for popUp alerts
         homePage.homePageButton();
-        Thread.sleep(500);
         products.clickMonitorButton();
         Thread.sleep(500);
         products.clickAsusProduct();

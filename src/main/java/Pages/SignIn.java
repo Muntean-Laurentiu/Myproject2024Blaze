@@ -106,7 +106,7 @@ public class SignIn {
 
         WebElement buttonSignUp = driver.findElement(By.xpath("//*[@id=\"signInModal\"]/div/div/div[3]/button[2]"));
         buttonSignUp.click();
-        //driver.switchTo().alert().accept();
+
     }
 
 }
