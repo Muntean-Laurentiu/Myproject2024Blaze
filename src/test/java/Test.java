@@ -28,7 +28,7 @@ public class Test extends BaseTest {
         signIn.clickSignUp();
         signIn.verifySignUpFormIsVisible();
         Thread.sleep(500);
-        signIn.signUpBasicInfo("Laurentiu Mirailo", "Blaze25");
+        signIn.signUpBasicInfo("Laurentiu Miruailo", "Blaze25");
         signIn.clickPopUpSignUp();
         Thread.sleep(1000);
         driver.switchTo().alert().accept(); // for popUp alerts
@@ -49,6 +49,7 @@ public class Test extends BaseTest {
         signIn.signInBasicInfo("Laurentiu Vasile","Blaze25");
         signIn.clickPopUpLogIn();
         signIn.verifyUserNameIsVisible();
+        System.out.println("Welcome Laurentiu Vasile");
         signIn.clickLogOut();
         signIn.verifyLoInIsVisible();
 
@@ -89,11 +90,14 @@ public class Test extends BaseTest {
         System.out.println(products.formatPrices());
         System.out.println("Pretul total al produselor din cos: ");
         products.pretTotalCos();
+        products.emptyCart1();
+        products.emptyCart2();
+        homePage.homePageButton();
 
 
         Thread.sleep(2000);
     }
-
+    
     @org.testng.annotations.Test
     public void tc04PlaceOrderTest() throws InterruptedException {
         HomePage homePage = new HomePage(driver);

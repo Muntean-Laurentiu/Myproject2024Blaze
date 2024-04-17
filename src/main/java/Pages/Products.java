@@ -159,6 +159,32 @@ public class Products {
     }
 
 
+    public void emptyCart1(){
+
+        Duration timeout = Duration.ofMinutes(1); // Așteaptă 1 minut
+        long timeoutSeconds = timeout.getSeconds();
+        WebDriverWait wait = new WebDriverWait(driver, timeout);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#tbodyid > tr:nth-child(2) > td:nth-child(4) > a")));
+
+        WebElement delete = driver.findElement(By.cssSelector("#tbodyid > tr:nth-child(2) > td:nth-child(4) > a"));
+        delete.click();
+
+    }
+
+
+    public void emptyCart2(){
+
+        Duration timeout = Duration.ofMinutes(1); // Așteaptă 1 minut
+        long timeoutSeconds = timeout.getSeconds();
+        WebDriverWait wait = new WebDriverWait(driver, timeout);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[6]/div/div[1]/div/table/tbody/tr/td[4]/a")));
+
+        WebElement delete2 = driver.findElement(By.xpath("/html/body/div[6]/div/div[1]/div/table/tbody/tr/td[4]/a"));
+        delete2.click();
+
+    }
+
+
 }
 
 
