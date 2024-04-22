@@ -8,40 +8,43 @@ public class Test extends BaseTest {
 
     @org.testng.annotations.Test
     public void tc00CheckTitlePage() throws InterruptedException {
-        HomePage homePage = new HomePage(driver);  //declar de unde se preiau sriturile
+        HomePage homePage = new HomePage(driver);  //declar de unde se preiau scriturile
         System.out.println("TC 00 ");
         System.out.println(homePage.verifyHomePage());
         Thread.sleep(2000);
         Assert.assertEquals(homePage.verifyHomePage(), "STORE");
+        System.out.println("Ok");
 
-        Thread.sleep(2000);
+        Thread.sleep(500);
     }
 
 
     @org.testng.annotations.Test
     public void tc01SignUpTest() throws InterruptedException{
-        HomePage homePage = new HomePage(driver);  //declar de unde se preiau sriturile
+        HomePage homePage = new HomePage(driver);  //declar de unde se preiau scriturile
         System.out.println("TC 01 ");
         System.out.println(homePage.verifyHomePage());
+        System.out.println("Ok");
         Thread.sleep(1000);
         SignIn signIn = new SignIn(driver);
         signIn.clickSignUp();
         signIn.verifySignUpFormIsVisible();
         Thread.sleep(500);
-        signIn.signUpBasicInfo("Laurentiu Miruailo", "Blaze25");
+        signIn.signUpBasicInfo("Laurentiu Mitrailo", "Blaze25");
         signIn.clickPopUpSignUp();
         Thread.sleep(1000);
         driver.switchTo().alert().accept(); // for popUp alerts
 
 
-        Thread.sleep(2000);
+        Thread.sleep(1000);
     }
 
     @org.testng.annotations.Test
     public void tc02LogInTest() throws InterruptedException {
-        HomePage homePage = new HomePage(driver);  //declar de unde se preiau sriturile
+        HomePage homePage = new HomePage(driver);  //declar de unde se preiau scriturile
         System.out.println("TC 02 ");
         System.out.println(homePage.verifyHomePage());
+        System.out.println("Ok");
         Thread.sleep(500);
         SignIn signIn = new SignIn(driver);
         signIn.clickLogIn();
@@ -62,8 +65,9 @@ public class Test extends BaseTest {
         HomePage homePage = new HomePage(driver);
         System.out.println("TC 03 ");
         System.out.println(homePage.verifyHomePage());
+        System.out.println("Ok");
         Thread.sleep(500);
-        Products products = new Products(driver); //declar de unde se preiau sriturile
+        Products products = new Products(driver); //declar de unde se preiau scriturile
         products.clickLaptopsButton();
         Thread.sleep(500);
         products.clickSonyI5Product();
@@ -92,6 +96,7 @@ public class Test extends BaseTest {
         products.pretTotalCos();
         products.emptyCart1();
         products.emptyCart2();
+        Thread.sleep(500);
         homePage.homePageButton();
 
 
@@ -103,9 +108,10 @@ public class Test extends BaseTest {
         HomePage homePage = new HomePage(driver);
         System.out.println("TC 04 ");
         System.out.println(homePage.verifyHomePage());
+        System.out.println("Ok");
         Thread.sleep(1000);
 
-        Products products = new Products(driver); //declar de unde se preiau sriturile
+        Products products = new Products(driver); //declar de unde se preiau scriturile
 
         PlaceOrder placeOrder = new PlaceOrder(driver); //declar de unde se preiau sriturile
 
@@ -148,7 +154,7 @@ public class Test extends BaseTest {
         placeOrder.clickOkAlertButton();
 
 
-        Thread.sleep(2000);
+        Thread.sleep(1500);
     }
 
 
